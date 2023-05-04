@@ -153,26 +153,26 @@
 </div>
 
 </div>
-    <div class="small-chat-box fadeInRight animated">
-
-        <div class="heading" draggable="true">
-            <small class="chat-date pull-right">
-                02.19.2015
-            </small>
-            Small chat
+<div class="small-chat-box fadeInRight animated">
+    <div class="heading" draggable="true">
+        <small class="chat-date pull-right">
+            02.19.2015
+        </small>
+        Small chat
+    </div>
+    <div style="position: relative; height: 280px; overflow-y: scroll;">
+        <div id="chat-window" style="position: absolute; bottom: 35px; width: 100%;">
+            <div id="output"></div>
+            <div id="actions"></div>
         </div>
-
-        <div class="content">
-            <div id="output" ></div>
-        </div>
-        <div class="form-chat">
+        <div class="form-chat" style="position: absolute; bottom: 0; width: 100%;">
             <div class="input-group input-group-sm">
-                <input type="text" id="message" placeholder="Message">
-                <button id="send">Send</button>
+                <input type="text" id="message" placeholder="message" style="width: calc(100% - 80px);">
+                <button id="send" style="background-color: #1ab394; color: #fff; border: none; border-radius: 0px 5px 5px 0px; padding: 6px 12px;">Send</button>
             </div>
         </div>
-
     </div>
+</div>
     <div id="small-chat">
 
         <span class="badge badge-warning pull-right">5</span>
@@ -182,9 +182,6 @@
         </a>
     </div>
 </div>
-
-
-
 <!-- Mainly scripts -->
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/bootstrap.min.js"></script>

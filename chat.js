@@ -4,7 +4,7 @@ let message = document.getElementById('message');
 //let username = document.getElementById('username'); 
 let btn = document.getElementById('send'); 
 let output = document.getElementById('output'); 
-let actions = document.getElementById('actions');
+
 let output2 = document.getElementById('output2'); 
 let actions2 = document.getElementById('actions2');
 let btn2 = document.getElementById('send2'); 
@@ -23,28 +23,35 @@ btn2.addEventListener('click' , function (){
 })
 
 socket.on('chat:message',function(data){
-    output.innerHTML += `<p>
-         <strong>  </> ${data.message}
-     </p>`
+    output2.innerHTML += `<div class="message message-received">
+         <div >
+             <strong>  </> ${data.message}
+         </div>
+     </div>`;
 });
+socket.on('message',function(dato){
+    output.innerHTML += `<div class="message message-sent">
+         <div >
+             <strong>  </> ${dato.message2}
+         </div>
+     </div>`;
+});
+
 
 socket.on('chat:message',function(data){
-    output2.innerHTML += `<p>
-         <strong>  </> ${data.message}
-     </p>`
+    output.innerHTML += `<div class="message message-received">
+         <div>
+             <strong>  </strong> ${data.message}
+         </div>
+     </div>`;
 });
 socket.on('message',function(dato){
-    output2.innerHTML += `<p>
-         <strong>  </> ${dato.message2}
-     </p>`
+    output2.innerHTML += `<div class="message message-sent">
+         <div>
+             <strong>  </strong> ${dato.message2}
+         </div>
+     </div>`;
 });
-socket.on('message',function(dato){
-    output.innerHTML += `<p>
-         <strong>  </> ${dato.message2}
-     </p>`
-});
-
-
 
 
 
